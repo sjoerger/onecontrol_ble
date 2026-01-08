@@ -1,0 +1,29 @@
+{
+  "domain": "onecontrol_ble",
+  "name": "OneControl BLE Gateway",
+  "codeowners": ["@phurth"],
+  "config_flow": true,
+  "dependencies": ["bluetooth"],
+  "documentation": "https://github.com/phurth/ha-onecontrol-ble",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/phurth/ha-onecontrol-ble/issues",
+  "requirements": [
+    "bleak>=0.21.0",
+    "bleak-retry-connector>=3.3.0",
+    "dbus-next>=0.2.3"
+  ],
+  "version": "1.0.0",
+  "bluetooth": [
+    {
+      "local_name": "LCIRemote*"
+    },
+    {
+      "manufacturer_id": 1479
+    },
+    {
+      "service_uuid": "00000041-0200-a58e-e411-afe28044e62c"
+    }
+  ]
+}
+

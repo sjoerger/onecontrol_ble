@@ -1,0 +1,39 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "OneControl BLE Gateway",
+        "description": "Select your OneControl device.\n\n**Before proceeding:**\n- Make sure your OneControl unit is powered on\n- You'll need the **6-digit PIN** from the sticker on your OneControl unit\n- You'll need to press the **Connect button** on your RV monitor panel during setup",
+        "data": {
+          "address": "Device"
+        }
+      },
+      "pairing_instructions": {
+        "title": "Prepare for Pairing",
+        "description": "Gateway: **{name}**\n\n**⚠️ IMPORTANT: Before continuing, you must put your OneControl device in pairing mode.**\n\n**Step 1: Press the Connect Button**\n1. Locate the **RV monitor panel** (the physical control panel in your RV)\n2. Press and release the **Connect** button on the monitor panel\n3. The device will enter pairing mode for 30-60 seconds\n4. You'll see a visual indicator (LED) if your panel has one\n\n**Step 2: Get Your PIN Ready**\n- While the device is in pairing mode, locate the **6-digit PIN**\n- The PIN is printed on a **sticker on your OneControl unit**\n- It looks like: `090336` (6 digits, may have leading zeros)\n- Have this PIN ready for the next step\n\n**Step 3: Continue Setup**\n- Click **Submit** below to continue\n- You must complete the PIN entry within the 30-60 second pairing window\n- If you run out of time, press the Connect button again and retry\n\n**💡 Tip:** Have the PIN ready before clicking Submit to save time!"
+      },
+      "pin": {
+        "title": "Enter PIN",
+        "description": "Gateway: **{name}**\n\n**⚠️ The device should be in pairing mode** (Connect button pressed in previous step).\n\n**Where to Find Your PIN:**\n- Look for a **sticker on your OneControl unit** (the Unity X270D controller)\n- The sticker contains a **6-digit numeric PIN**\n- It may look like: `090336` or `123456`\n- The PIN may have leading zeros (e.g., `090336` not `90336`)\n\n**Enter the 6-digit PIN below:**\n\n**⏱️ Timing:** You have 30-60 seconds from when you pressed the Connect button. If pairing fails, press the Connect button again and retry the setup.",
+        "data": {
+          "pin": "PIN (6 digits from sticker)"
+        }
+      },
+      "confirm": {
+        "title": "Complete Setup",
+        "description": "Ready to set up **{name}** ({address})?\n\n**Final Checklist:**\n- ✅ PIN entered: {pin_status}\n- ⚠️ Device should be in pairing mode (Connect button pressed)\n- ⚠️ Setup will begin immediately after you confirm\n\nClick **Submit** to start the connection and pairing process."
+      }
+    },
+    "error": {
+      "not_supported": "Device is not a supported OneControl gateway",
+      "no_cypher": "Could not extract cypher from device advertisement",
+      "no_devices_found": "No OneControl devices found. Please ensure your device is powered on and in pairing mode.",
+      "pin_format_error": "PIN must be exactly 6 digits"
+    },
+    "abort": {
+      "already_configured": "Device is already configured",
+      "no_devices_found": "No OneControl devices found"
+    }
+  }
+}
+
