@@ -14,8 +14,9 @@ CONF_PIN: Final = "pin"
 # BLE Service UUIDs
 # Authentication service (for seed/key exchange)
 AUTH_SERVICE_UUID: Final = "00000010-0200-a58e-e411-afe28044e62c"
-SEED_CHAR_UUID: Final = "00000012-0200-a58e-e411-afe28044e62c"
-KEY_CHAR_UUID: Final = "00000013-0200-a58e-e411-afe28044e62c"
+SEED_NOTIFY_CHAR_UUID: Final = "00000011-0200-a58e-e411-afe28044e62c"  # Seed via notification (NEW)
+SEED_CHAR_UUID: Final = "00000012-0200-a58e-e411-afe28044e62c"  # Seed read characteristic (legacy)
+KEY_CHAR_UUID: Final = "00000013-0200-a58e-e411-afe28044e62c"  # Auth key write
 
 # Data service (for CAN-over-BLE communication)
 DATA_SERVICE_UUID: Final = "00000030-0200-a58e-e411-afe28044e62c"
@@ -23,7 +24,6 @@ DATA_WRITE_CHAR_UUID: Final = "00000033-0200-a58e-e411-afe28044e62c"
 DATA_READ_CHAR_UUID: Final = "00000034-0200-a58e-e411-afe28044e62c"
 
 # Password unlock characteristic (for application-level unlock)
-# This is NOT for BLE pairing - it's for unlocking the gateway's services after connection
 UNLOCK_CHAR_UUID: Final = "00000005-0200-a58e-e411-afe28044e62c"
 
 # CAN service (contains unlock characteristic and CAN read/write)
@@ -46,6 +46,9 @@ TEA_CONSTANT_3: Final = 0x7421ED44  # 1948272964
 TEA_CONSTANT_4: Final = 0x5378A963  # 1400073827
 TEA_ROUNDS: Final = 32
 
+# Hardcoded cipher for TEA encryption (NEW - based on your research)
+HARDCODED_CIPHER: Final = 0x8100080D
+
 # Connection timeouts
 CONNECTION_TIMEOUT: Final = 20.0
 PAIRING_TIMEOUT: Final = 30.0
@@ -64,4 +67,3 @@ AUTH_STATE_LOCKED: Final = "locked"
 AUTH_STATE_UNLOCKED: Final = "unlocked"
 AUTH_STATE_AUTHENTICATING: Final = "authenticating"
 AUTH_STATE_FAILED: Final = "failed"
-
