@@ -1,3 +1,6 @@
+# PLEASE READ
+This code is not functional in its present state - Jan 8th, 2026
+
 # OneControl BLE Gateway - Home Assistant Integration
 
 A fresh Home Assistant integration for controlling RV systems via OneControl BLE Gateway.
